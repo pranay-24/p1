@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Accordian from './components/Accordian';
+import Alert from './components/Alert';
+import React,{useState} from 'react'
 
 function App() {
+  const [alert,setalert]=useState(null)
+   
+  const showalert=()=>{
+setalert("Primary")
+setTimeout(() => {
+    setalert(null)
+}, 2000);
+  }
+const handleclick=()=>{
+  showalert();
+}
+    
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Alert />
+     {/* <div>{showalert("primary")}</div>  */}
+      <button type="button" className="btn btn-primary" onClick={handleclick}>generate alert</button>
+     <Accordian/>
+  
     </div>
   );
 }
