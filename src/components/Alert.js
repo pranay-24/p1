@@ -1,14 +1,13 @@
 import React from'react'
 import useState from 'react'
 
-export default function Alert()
+export default function Alert(props)
 {   
-
     return(
-    <div>
-<div className="alert alert-primary" role="alert">
+    
+props.alert && <div className={`alert alert-${props.alert} alert-dismissible fade show`} role="alert">
   A simple primary alert—check it out!
 </div>
-    </div>
+    
     )
 }

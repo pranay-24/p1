@@ -1,29 +1,38 @@
 
 import './App.css';
 import Accordian from './components/Accordian';
-import Alert from './components/Alert';
+import Alertest from './components/Alertest';
 import React,{useState} from 'react'
+import Navbar from './components/Navbar';
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route  
+} from "react-router-dom";
 
 function App() {
-  const [alert,setalert]=useState(null)
-   
-  const showalert=()=>{
-setalert("Primary")
-setTimeout(() => {
-    setalert(null)
-}, 2000);
-  }
-const handleclick=()=>{
-  showalert();
-}
+
     
   return (
     <div >
-      <Alert />
-     {/* <div>{showalert("primary")}</div>  */}
-      <button type="button" className="btn btn-primary" onClick={handleclick}>generate alert</button>
-     <Accordian/>
+      
+      <Router>
+      <Navbar/>
   
+      
+     {/* <div>{showalert("primary")}</div>  */}
+      
+     
+    
+      <div>
+      <Routes>
+      
+          <Route path="/accordian" element={<Accordian/>} />
+          <Route path="/alertest" element={<Alertest/>} />
+      </Routes>
+      </div>
+    </Router>
     </div>
   );
 }
