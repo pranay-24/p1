@@ -2,6 +2,7 @@
 import './App.css';
 import Accordian from './components/Accordian';
 import Alertest from './components/Alertest';
+import Form from './components/Form';
 import React,{useState} from 'react'
 import Navbar from './components/Navbar';
 
@@ -30,6 +31,7 @@ function App() {
       
           <Route path="/accordian" element={<Accordian/>} />
           <Route path="/alertest" element={<Alertest/>} />
+          <Route path="/form" element={<Form/>} />
       </Routes>
       </div>
     </Router>

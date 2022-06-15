@@ -23,9 +23,13 @@ export default function Navbar()
  
           <Link className="nav-link active" to="/accordian">Counter</Link>
         </li>
+
         <li className="nav-item">
- 
- <Link className="nav-link active" to="/alertest">Counter</Link>
+         <Link className="nav-link active" to="/alertest">Alert</Link>
+        </li>
+
+<li className="nav-item">
+  <Link className="nav-link active" to="/form">Form</Link>
 </li>
 
        
