@@ -11,6 +11,7 @@ import {
   Routes,
   Route  
 } from "react-router-dom";
+import News from './components/News';
 
 function App() {
 
@@ -32,6 +33,8 @@ function App() {
           <Route path="/accordian" element={<Accordian/>} />
           <Route path="/alertest" element={<Alertest/>} />
           <Route path="/form" element={<Form/>} />
+          <Route path="/news" element={<News/>}/>
+
       </Routes>
       </div>
     </Router>
