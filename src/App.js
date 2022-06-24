@@ -5,6 +5,7 @@ import Alertest from './components/Alertest';
 import Form from './components/Form';
 import React,{useState} from 'react'
 import Navbar from './components/Navbar';
+import Samples from './components/Multicounter';
 
 import {
   BrowserRouter as Router,
@@ -12,6 +13,7 @@ import {
   Route  
 } from "react-router-dom";
 import News from './components/News';
+import Multicounter from './components/Multicounter';
 
 function App() {
 
@@ -34,6 +36,7 @@ function App() {
           <Route path="/alertest" element={<Alertest/>} />
           <Route path="/form" element={<Form/>} />
           <Route path="/news" element={<News/>}/>
+          <Route path="/multicounter" element={<Multicounter/>}/>
 
       </Routes>
       </div>

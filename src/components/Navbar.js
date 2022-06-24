@@ -34,7 +34,10 @@ export default function Navbar()
 <li className="nav-item">
   <Link className="nav-link active" to="/news">News</Link>
 </li>
-       
+<li className="nav-item">
+  <Link className="nav-link active" to="/multicounter">Multicounter</Link>
+</li>  
+
       </ul>
       
     </div>
